@@ -97,7 +97,7 @@ function library:Keybind(key)
     end)
 end
 
-function library:Window(name) 
+function library:CreateWindow(name) 
     windowCount = windowCount + 1
     local winCount = windowCount
     local zindex = winCount * 7
