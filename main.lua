@@ -281,7 +281,7 @@ function library:Window(name)
         ToggleFiller.ZIndex = 2 + zindex
         pastSliders[winCount] = false
     end
-    function functions:Box(text, callback)
+    function functions:TextBox(text, callback)
         local callback = callback or function() end
 
         sizes[winCount] = sizes[winCount] + 32
@@ -289,7 +289,7 @@ function library:Window(name)
 
         listOffset[winCount] = listOffset[winCount] + 32
         local TextBox = Instance.new("TextBox")
-        local BoxDescription = Instance.new("TextLabel")
+        local TextBoxDescription = Instance.new("TextLabel")
         TextBox.Parent = Window
         TextBox.BackgroundColor3 = Color3.fromRGB(53, 59, 72)
         TextBox.BorderColor3 = Color3.fromRGB(113, 128, 147)
@@ -310,18 +310,18 @@ function library:Window(name)
             callback(TextBox.Text, true)
         end)
 
-        BoxDescription.Name = "BoxDescription"
-        BoxDescription.Parent = TextBox
-        BoxDescription.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        BoxDescription.BackgroundTransparency = 1.000
-        BoxDescription.Position = UDim2.new(-0.894736826, 0, 0, 0)
-        BoxDescription.Size = UDim2.new(0, 75, 0, 26)
-        BoxDescription.Font = Enum.Font.SourceSans
-        BoxDescription.Text = text or "Box"
-        BoxDescription.TextColor3 = Color3.fromRGB(245, 246, 250)
-        BoxDescription.TextSize = 16.000
-        BoxDescription.TextXAlignment = Enum.TextXAlignment.Left
-        BoxDescription.ZIndex = 2 + zindex
+        TextBoxDescription.Name = "TextBoxDescription"
+        TextBoxDescription.Parent = TextBox
+        TextBoxDescription.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        TextBoxDescription.BackgroundTransparency = 1.000
+        TextBoxDescription.Position = UDim2.new(-0.894736826, 0, 0, 0)
+        TextBoxDescription.Size = UDim2.new(0, 75, 0, 26)
+        TextBoxDescription.Font = Enum.Font.SourceSans
+        TextBoxDescription.Text = text or "TextBox"
+        TextBoxDescription.TextColor3 = Color3.fromRGB(245, 246, 250)
+        TextBoxDescription.TextSize = 16.000
+        TextBoxDescription.TextXAlignment = Enum.TextXAlignment.Left
+        TextBoxDescription.ZIndex = 2 + zindex
         pastSliders[winCount] = false
     end
     function functions:Slider(text, min, max, default, callback)
